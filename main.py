@@ -38,6 +38,7 @@ def listing(bot, update):
 	for repo in range(len(r)):
 		bot.send_message(chat_id=update.message.chat_id,text=r[repo]['html_url'])
 
+
 #Transforma as funções em Comandos
 start_handler = CommandHandler('start', start)
 listing_handler = CommandHandler('listing', listing)
