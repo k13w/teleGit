@@ -7,7 +7,7 @@
     Aproveitem ^^
 
 ```
-    [+] AUTOR:        Gilmar Silva
+    [+] AUTOR:               Gilmar Silva
     [+] Contribuidor:        Jr750ac
     [+] Contribuidor:        Pedro Souza
     [+] GITHUB:       https://github.com/HeavenH
