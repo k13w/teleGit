@@ -2,8 +2,8 @@
 ##Bot para telegram | Python 3
 
 ###Apresentação
-    Um bot para listar seus repositórios do github ^^ por enquanto é só isso o codigo tá bem clean pra quem quiser usar como base!
-    Futuramente terá muito mais funcionalidades :p
+    Um bot para listar seus repositórios do github ^^ por enquanto é só isso o codigo tá bem clean 
+    pra quem quiser usar como base futuramente terá muito mais funcionalidades :p
     Aproveitem ^^
 
 ```
