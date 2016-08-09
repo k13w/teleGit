@@ -2,9 +2,9 @@
 ##Bot para telegram Since 2016
 
 [![Python-Versions](https://img.shields.io/badge/python-2.6%2C%202.7%2C%203.3%2C%203.4%2C%203.5-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-LGPLv3-brightgreen.svg)](https://www.gnu.org/licenses/lgpl-3.0.html)
-[![Version-Program](https://img.shields.io/badge/style-pep8-ff69b4.svg)](https://github.com/HeavenH/teleGit/releases)
-[![Pep8](https://img.shields.io/badge/license-LGPLv3-brightgreen.svg)](https://www.python.org/dev/peps/pep-0008/)
+[![License](https://img.shields.io/badge/license-LGPLv3-33CCFF.svg)](https://www.gnu.org/licenses/lgpl-3.0.html)
+[![Version-Program](https://img.shields.io/badge/version-1.0-orange.svg)](https://github.com/HeavenH/teleGit/releases)
+[![Pep8](https://img.shields.io/badge/style-pep8-FF0000.svg)](https://www.python.org/dev/peps/pep-0008/)
 
 ###Apresentação
     Um bot para listar seus repositórios do github ^^ por enquanto é só isso o codigo tá bem clean 
