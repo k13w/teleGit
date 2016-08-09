@@ -8,7 +8,7 @@
 
 ```
     [+] AUTOR:        Gilmar Silva
-    [+] Contribuidor:        CliTrix
+    [+] Contribuidor:        Jr750ac
     [+] Contribuidor:        Pedro Souza
     [+] GITHUB:       https://github.com/HeavenH
     [+] GITHUB:       https://github.com/Jr750ac
