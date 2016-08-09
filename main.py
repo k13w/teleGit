@@ -1,6 +1,7 @@
 import telegram
 import configparser
 from requests import get
+from json import loads
 
 from telegram.ext import Updater, CommandHandler
 
@@ -13,31 +14,36 @@ config.read_file(open('config.ini'))
 updater = Updater(token=config['DEFAULT']['token'])
 dispatcher = updater.dispatcher
 
-def start(bot, update):
+#Função Inicial
+def start(bot, update):	
 	me = bot.get_me()
 
 	#Mesagem Inicial
 	msg = "Bem vindo!\n"
 	msg += "Eu sou o TeleGit\n"
 	msg += "O que você gostaria de fazer?\n"
-	msg += "/listing - Listará seus repositórios"
-
-	#Comandos Menu
-	main_menu_keyboad = [[telegram.KeyboardButton('/listing')]]
-	reply_kb_markup = telegram.ReplyKeyboardMarkup(main_menu_keyboad,resize_keyboard=True,one_time_keyboard=True)
+	msg += "/listing +username - Listará seus repositórios\n"
+	msg += "Ex - /listing HeavenH"
 
 	#Envia a mensagem com o menu
-	bot.send_message(chat_id=update.message.chat_id,text=msg,reply_markup=reply_kb_markup)
+	bot.send_message(chat_id=update.message.chat_id,text=msg)
 
+#Função para listar os repositórios
 def listing(bot, update):
-	r = get('https://api.github.com/users/')
-	#Listará os repositórios do github do usuário
-	bot.send_message(chat_id=update.message.chat_id,text="Listando seu github :)")
+	user = update.message.text.split()
+	user = user[1]
+	bot.send_message(chat_id=update.message.chat_id,text=user) 
+	r = get('https://api.github.com/users/' + user + '/repos').text
+	r = loads(r)
+	for repo in range(len(r)):
+		bot.send_message(chat_id=update.message.chat_id,text=r[repo]['html_url'])
 
-#ComandHandler Tranformara a função start em comando
-#dispatcher Enviaraa a função em comando para o telegram	
-
+#Transforma as funções em Comandos
 start_handler = CommandHandler('start', start)
-dispatcher.add_handler(start_handler)
 listing_handler = CommandHandler('listing', listing)
+
+#Envia os Comandos para o telegram
+dispatcher.add_handler(start_handler)
 dispatcher.add_handler(listing_handler)
+
+#Desenvolvido by Heaven,CliTrix,Cerberu5 all rights reserved
