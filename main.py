@@ -23,7 +23,7 @@ def start(bot, update):
 	msg += "Eu sou o TeleGit\n"
 	msg += "O que você gostaria de fazer?\n"
 	msg += "/listing +username - Listará seus repositórios\n"
-	msg += "Ex - /listing HeavenH"
+	msg += "Ex: /listing HeavenH"
 
 	#Envia a mensagem com o menu
 	bot.send_message(chat_id=update.message.chat_id,text=msg)
