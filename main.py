@@ -1,4 +1,5 @@
-
+from sys import path
+path.append("src/")
 from GitApi import GitHub
 import configparser
 from telegram.ext import Updater, CommandHandler

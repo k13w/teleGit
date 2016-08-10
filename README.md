@@ -18,6 +18,7 @@
     [+] GITHUB:              https://github.com/HeavenH
     [+] GITHUB:              https://github.com/Jr750ac
     [+] GITHUB:              https://github.com/Pedro-Souza
+    [+] Lib:                 https://github.com/Pedro-Souza/My-Scripts/blob/master/GitApi.py
 ```
 
 ####Installation:
