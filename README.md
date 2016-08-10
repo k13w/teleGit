@@ -7,17 +7,17 @@
 [![Pep8](https://img.shields.io/badge/style-pep8-FF0000.svg)](https://www.python.org/dev/peps/pep-0008/)
 
 ###Apresentação
-    Um bot para listar seus repositórios do github ^^ por enquanto é só isso o codigo tá bem clean 
-    pra quem quiser usar como base futuramente terá muito mais funcionalidades :p
+    Um bot para listar seus repositórios do github,por enquanto é só isso,o codigo tá bem clean 
+    pra quem quiser usar como base futuramente,em breve terá muito mais funcionalidades :p
     Aproveitem ^^
 
 ```
     [+] AUTOR:               Gilmar Silva
     [+] Contribuidor:        Jr750ac
     [+] Contribuidor:        Pedro Souza
-    [+] GITHUB:       https://github.com/HeavenH
-    [+] GITHUB:       https://github.com/Jr750ac
-    [+] GITHUB:       https://github.com/Pedro-Souza
+    [+] GITHUB:              https://github.com/HeavenH
+    [+] GITHUB:              https://github.com/Jr750ac
+    [+] GITHUB:             https://github.com/Pedro-Souza
 ```
 
 ####Installation:
