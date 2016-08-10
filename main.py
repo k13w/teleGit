@@ -1,4 +1,3 @@
-import telegram
 import configparser
 from requests import get
 from json import loads
@@ -25,7 +24,7 @@ def start(bot, update):
 	msg += "/listing +username - Listará seus repositórios\n"
 	msg += "Ex: /listing HeavenH"
 
-	#Envia a mensagem com o menu
+	#Envia a mensagem para o telegram
 	bot.send_message(chat_id=update.message.chat_id,text=msg)
 
 #Função para listar os repositórios
@@ -37,6 +36,7 @@ def listing(bot, update):
 	for repo in range(len(r)):
 		bot.send_message(chat_id=update.message.chat_id,text=r[repo]['html_url'])
 
+#Função para mostrar as informações do usuário
 def info(bot, update):
 	user = update.message.text.split()[1]
 	bot.send_message(chat_id=update.message.chat_id,text=user) 
@@ -48,7 +48,8 @@ def info(bot, update):
 	msg += 'Blog: ' + str(r['blog'] + '\n')
 	msg += 'Location: ' + str(r['location'] + '\n')
 	msg += 'Bio: ' + str(r['bio'] + '\n')
-
+	
+	#Envia a mensagem para o telegram
 	bot.send_message(chat_id=update.message.chat_id,text=msg)
 
 #Transforma as funções em Comandos
