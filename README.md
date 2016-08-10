@@ -36,8 +36,8 @@
 3.Run Progam
 ```
     In another instance, open the Python shell and run:
-    from main import updater
-    updater.start_polling()
+    from main import up
+    up.start_polling()
 ```
 
 ### Contribute
