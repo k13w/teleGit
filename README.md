@@ -17,7 +17,7 @@
     [+] Contribuidor:        Pedro Souza
     [+] GITHUB:              https://github.com/HeavenH
     [+] GITHUB:              https://github.com/Jr750ac
-    [+] GITHUB:             https://github.com/Pedro-Souza
+    [+] GITHUB:              https://github.com/Pedro-Souza
 ```
 
 ####Installation:
