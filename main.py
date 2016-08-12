@@ -15,7 +15,6 @@ dispatcher = up.dispatcher
 
 # Função Inicial
 
-
 def start(bot, update):
     me = bot.get_me()
 
@@ -32,7 +31,6 @@ def start(bot, update):
 
 # Função para listar os repositórios
 
-
 def listing(bot, update):
     user = update.message.text.split()[1]
     bot.send_message(chat_id=update.message.chat_id, text=user)
@@ -40,6 +38,7 @@ def listing(bot, update):
     bot.send_message(chat_id=update.message.chat_id,
                      text=re.GetRepos(user))
 
+# Função para mostrar informações do usuário
 
 def info(bot, update):
     user = update.message.text.split()[1]
