@@ -9,7 +9,7 @@
 ###Introduction
     A bot to list the github repositories, show users information,
     for now only have these functions, the code okay clean for those who want to use based on future.
-    Will soon have many more functions! :p
+    Will soon have many more functions!
     Enjoy ^^
 
 ```
