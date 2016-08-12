@@ -2,12 +2,12 @@ from sys import path
 path.append("src/")
 from GitApi import GitHub
 import configparser
+from telegram import ParseMode, Emoji
 from telegram.ext import Updater, CommandHandler
 
 # Bot Configuration
 config = configparser.ConfigParser()
 config.read_file(open('config.ini'))
-
 # Connecting the telegram API
 # Updater will take the information and dispatcher connect the message to the bot
 up = Updater(token=config['DEFAULT']['token'])
@@ -16,8 +16,6 @@ dispatcher = up.dispatcher
 # Home function
 
 def start(bot, update):
-    me = bot.get_me()
-
     # Home message
     msg = "Bem vindo!\n"
     msg += "Eu sou o TeleGit\n"
@@ -30,33 +28,32 @@ def start(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text=msg)
 
 # Function to list the repositories
-
-def listing(bot, update):
-    user = update.message.text.split()[1]
-    bot.send_message(chat_id=update.message.chat_id, text=user)
-    re = GitHub()
-    bot.send_message(chat_id=update.message.chat_id,
-                     text=re.GetRepos(user))
+def listing(bot, update, args):
+    gh = GitHub()
+    for user in args:
+        bot.send_message(chat_id=update.message.chat_id,
+                                           text='{2} Listando os repositórios do usuário [{0}](https://github.com/{0}) {1}'.format(user, Emoji.WHITE_DOWN_POINTING_BACKHAND_INDEX, '\U0001F5C4'),
+                                           parse_mode=ParseMode.MARKDOWN)
+    
+        bot.send_message(chat_id=update.message.chat_id,
+                                           text=gh.GetRepos(user))
 
 # Function to display user information
+def info(bot, update, args):
+    gh = GitHub()
+    for user in args:
+        bot.send_message(chat_id=update.message.chat_id,
+                                           text='{2} Informações sobre o usuário [{0}](https://github.com/{0}) {1}'.format(user, Emoji.WHITE_DOWN_POINTING_BACKHAND_INDEX, Emoji.INFORMATION_SOURCE),
+                                           parse_mode=ParseMode.MARKDOWN)
+        bot.send_message(chat_id=update.message.chat_id,
+                                           text=gh.GetInfo(user))
 
-def info(bot, update):
-    user = update.message.text.split()[1]
-    bot.send_message(chat_id=update.message.chat_id, text=user)
-    msg = GitHub()
-    bot.send_message(chat_id=update.message.chat_id, text=msg.GetInfo(user))
-
-# Transforms functions in Commands
-start_handler = CommandHandler('start', start)
-listing_handler = CommandHandler('listing', listing)
-info_handler = CommandHandler('info', info)
-
-# Sends the commands to the telegram
-dispatcher.add_handler(start_handler)
-dispatcher.add_handler(listing_handler)
-dispatcher.add_handler(info_handler)
+# Add handlers to dispatcher
+dispatcher.add_handler(CommandHandler('start', start))
+dispatcher.add_handler(CommandHandler('listing', listing, pass_args=True))
+dispatcher.add_handler(CommandHandler('info', info, pass_args=True))
 
 # Start the program
 up.start_polling()
 
-# Developed by Heaven, Jr750ac, Pedro Souza all rights reserved
+# Developed by Heaven, Jr750ac, Pedro Souza, Israel Sant'Anna all rights reserved
