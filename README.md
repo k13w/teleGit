@@ -14,30 +14,48 @@
 
 ```
     [+] Author:              Gilmar Silva
-    [+] Collaborator:        Jr750ac
-    [+] Collaborator:        Pedro Souza
     [+] GITHUB:              https://github.com/HeavenH
+    
+    [+] Collaborator:        Jr750ac
     [+] GITHUB:              https://github.com/Jr750ac
+    
+    [+] Collaborator:        Pedro Souza
     [+] GITHUB:              https://github.com/Pedro-Souza
     [+] Lib:                 https://github.com/Pedro-Souza/My-Scripts/blob/master/GitApi.py
+    
+    [+] Collaborator:        Israel Sant'Anna
+    [+] GITHUB:              https://github.com/israelss
 ```
 
-####Installation:
+##Installation:
 
-1.Install the requirements
+###Install the requirements
 
 ```
     pip install -r requirements.txt
 ```
+###Config Program
+Talk to [BotFather](https://telegram.me/BotFather) and put the token you get there in config.ini file (without quotes)
+```
+    [DEFAULT]
+    token=123456789:AReaaaaaaaaaallyLooooooooooongTOKEN
+```
+##Usage:
+###Starting
+Replace with `python` if you're using python 2.7:
+```
+    python3 main.py
+```
+###Using
+On Telegram, to list the repos from several users, use:
+```
+    `/listing <user1> <user2> ... <userN>`
+```
 
-2.Config Program
+To see the info about several users, use:
 ```
-    put your token in config.ini file
-```
-3.Using
-```
-    run progam main.py
+    `/info <user1> <user2> ... <userN>`
 ```
 
 ### Contribute
-Copyright (C) 2016 Gilmar Silva | Pedro Souza | Jose Roberto
+Copyright (C) 2016 Gilmar Silva | Pedro Souza | Jose Roberto | Israel Sant'Anna
