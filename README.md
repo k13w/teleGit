@@ -49,12 +49,12 @@ Replace with `python` if you're using python 2.7:
 ###Using
 On Telegram, to list the repos from several users, use:
 ```
-    `/listing <user1> <user2> ... <userN>`
+    /listing <user1> <user2> ... <userN>
 ```
 
 To see the info about several users, use:
 ```
-    `/info <user1> <user2> ... <userN>`
+    /info <user1> <user2> ... <userN>
 ```
 
 ### Contribute
