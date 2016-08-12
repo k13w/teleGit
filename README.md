@@ -33,13 +33,10 @@
 2.Config Program
 ```
     put your token in config.ini file
-    run progam main.py
 ```
 3.Run Progam
 ```
-    In another instance, open the Python shell and run:
-    from main import up
-    up.start_polling()
+    run progam main.py
 ```
 
 ### Contribute
