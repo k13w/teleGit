@@ -7,8 +7,9 @@
 [![Pep8](https://img.shields.io/badge/style-pep8-FF0000.svg)](https://www.python.org/dev/peps/pep-0008/)
 
 ###Apresentação
-    Um bot para listar seus repositórios do github,por enquanto é só isso,o codigo tá bem clean 
-    pra quem quiser usar como base futuramente,em breve terá muito mais funcionalidades :p
+    Um bot para listar seus repositórios do github,mostrar informções dos usuários,
+    por enquanto é só isso,o codigo tá bem clean pra quem quiser usar como base futuramente.
+    Em breve terá muito mais funcionalidades :p
     Aproveitem ^^
 
 ```
