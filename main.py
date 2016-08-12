@@ -57,4 +57,4 @@ dispatcher.add_handler(start_handler)
 dispatcher.add_handler(listing_handler)
 dispatcher.add_handler(info_handler)
 
-# Desenvolvido by Heaven,CliTrix,Cerberu5 all rights reserved
+# Desenvolvido by Heaven,Jr750ac,Cerberu5 all rights reserved
