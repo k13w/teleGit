@@ -32,7 +32,7 @@
 
 2.Config Program
 ```
-    put your token and its id chat in config.ini file
+    put your token in config.ini file
     run progam main.py
 ```
 3.Run Progam
