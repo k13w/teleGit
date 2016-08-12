@@ -4,21 +4,21 @@ from GitApi import GitHub
 import configparser
 from telegram.ext import Updater, CommandHandler
 
-# Configuração do Bot
+# Bot Configuration
 config = configparser.ConfigParser()
 config.read_file(open('config.ini'))
 
-# Conectando a API do telegram
-# Updater pegará as informações e dispatcher conectará a mensagem ao bot
+# Connecting the telegram API
+# Updater will take the information and dispatcher connect the message to the bot
 up = Updater(token=config['DEFAULT']['token'])
 dispatcher = up.dispatcher
 
-# Função Inicial
+# Home function
 
 def start(bot, update):
     me = bot.get_me()
 
-    # Mesagem Inicial
+    # Home message
     msg = "Bem vindo!\n"
     msg += "Eu sou o TeleGit\n"
     msg += "O que você gostaria de fazer?\n"
@@ -26,10 +26,10 @@ def start(bot, update):
     msg += "/info + username - Listará suas informações\n"
     msg += "Ex: /listing HeavenH | /info HeavenH"
 
-    # Envia a mensagem com o menu
+    # Send the message
     bot.send_message(chat_id=update.message.chat_id, text=msg)
 
-# Função para listar os repositórios
+# Function to list the repositories
 
 def listing(bot, update):
     user = update.message.text.split()[1]
@@ -38,7 +38,7 @@ def listing(bot, update):
     bot.send_message(chat_id=update.message.chat_id,
                      text=re.GetRepos(user))
 
-# Função para mostrar informações do usuário
+# Function to display user information
 
 def info(bot, update):
     user = update.message.text.split()[1]
@@ -46,17 +46,17 @@ def info(bot, update):
     msg = GitHub()
     bot.send_message(chat_id=update.message.chat_id, text=msg.GetInfo(user))
 
-# Transforma as funções em Comandos
+# Transforms functions in Commands
 start_handler = CommandHandler('start', start)
 listing_handler = CommandHandler('listing', listing)
 info_handler = CommandHandler('info', info)
 
-# Envia os Comandos para o telegram
+# Sends the commands to the telegram
 dispatcher.add_handler(start_handler)
 dispatcher.add_handler(listing_handler)
 dispatcher.add_handler(info_handler)
 
-# Iniciará o progama
+# Start the program
 up.start_polling()
 
-# Desenvolvido by Heaven, Jr750ac, Pedro Souza all rights reserved
+# Developed by Heaven, Jr750ac, Pedro Souza all rights reserved
