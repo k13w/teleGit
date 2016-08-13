@@ -6,7 +6,7 @@ from json import loads
 from argparse import ArgumentParser
 
 
-class GitHub():
+class GitHub:
 
     def GetRepos(self, user):
         self.msg = ""
