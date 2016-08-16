@@ -1,6 +1,5 @@
 from sys import path
 path.append("src/")
-from time import sleep
 from GitApi import GitHub
 import configparser
 from telegram import ParseMode, Emoji
@@ -11,7 +10,8 @@ config = configparser.ConfigParser()
 config.read_file(open('config.ini'))
 
 # Connecting the telegram API
-# Updater will take the information and dispatcher connect the message to the bot
+# Updater will take the information and dispatcher connect the message to
+# the bot
 up = Updater(token=config['DEFAULT']['token'])
 dispatcher = up.dispatcher
 
@@ -26,9 +26,10 @@ def start(bot, update):
     msg += "Ex: /listing HeavenH | /info HeavenH"
 
     # Send the message
-    bot.send_message(chat_id=update.message.chat_id, 
-                    text=msg.format(user_name=update.message.from_user.first_name,
-                                   bot_name=bot.name))
+    bot.send_message(chat_id=update.message.chat_id,
+                     text=msg.format(
+                         user_name=update.message.from_user.first_name,
+                         bot_name=bot.name))
 
 
 # Function to list the repositories
@@ -67,4 +68,5 @@ dispatcher.add_handler(CommandHandler('info', info, pass_args=True))
 # Start the program
 up.start_polling()
 
-# Developed by Heaven, Jr750ac, Pedro Souza, Israel Sant'Anna all rights reserved
+# Developed by Heaven, Jr750ac, Pedro Souza, Israel Sant'Anna all rights
+# reserved
