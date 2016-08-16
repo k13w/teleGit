@@ -1,12 +1,15 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
 from sys import path
-path.append("src/")
-from GitApi import GitHub
-import configparser
+from configparser import ConfigParser
 from telegram import ParseMode, Emoji
 from telegram.ext import Updater, CommandHandler
+path.append("src/")
+from GitApi import GitHub
 
 # Bot Configuration
-config = configparser.ConfigParser()
+config = ConfigParser()
 config.read_file(open('config.ini'))
 
 # Connecting the telegram API
@@ -44,7 +47,7 @@ def listing(bot, update, args):
                          parse_mode=ParseMode.MARKDOWN)
 
         bot.send_message(chat_id=update.message.chat_id,
-                         text=gh.GetRepos(user))
+                         text=gh.get_repos(user))
 
 
 # Function to display user information
@@ -58,7 +61,7 @@ def info(bot, update, args):
                              Emoji.INFORMATION_SOURCE),
                          parse_mode=ParseMode.MARKDOWN)
         bot.send_message(chat_id=update.message.chat_id,
-                         text=gh.GetInfo(user))
+                         text=gh.get_info(user))
 
 # Add handlers to dispatcher
 dispatcher.add_handler(CommandHandler('start', start))
