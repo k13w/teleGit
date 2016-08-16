@@ -8,7 +8,7 @@ from argparse import ArgumentParser
 
 class GitHub:
 
-    def GetRepos(self, user):
+    def get_repos(self, user):
         self.msg = ""
         req = loads(get('https://api.github.com/users/' +
                         user + '/repos').text)
@@ -24,7 +24,7 @@ class GitHub:
                 str(req[i]['forks_count'])
         return self.msg
 
-    def GetInfo(self, user):
+    def get_info(self, user):
         self.msg = ""
         req = loads(get('https://api.github.com/users/' + user).text)
         self.msg += '\nInformation of user:\n'
@@ -38,7 +38,7 @@ class GitHub:
         self.msg += '\nFollowers: ' + str(req['followers']) + '\n'
         return self.msg
 
-    def Arguments(self):
+    def arguments(self):
         self.user = GitHub()
         self.parser = ArgumentParser()
         self.parser.add_argument('--repos', dest='repos', action='store_true',
