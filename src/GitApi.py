@@ -59,3 +59,7 @@ class GitHub:
             print(self.user.GetInfo(self.args.user))
         else:
             print('Use --info, --repos or --all.')
+
+if __name__ == "__main__":
+    arg = GitHub()
+    arg.arguments()
