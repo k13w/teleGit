@@ -6,7 +6,7 @@
 [![Version-Program](https://img.shields.io/badge/version-1.0-orange.svg)](https://github.com/HeavenH/teleGit/releases)
 [![Pep8](https://img.shields.io/badge/style-pep8-FF0000.svg)](https://www.python.org/dev/peps/pep-0008/)
 
-###Introduction
+### Introduction
     A bot to list the github repositories, show users information,
     for now only have these functions, the code okay clean for those who want to use based on future.
     Will soon have many more functions!
@@ -27,26 +27,26 @@
     [+] GITHUB:              https://github.com/israelss
 ```
 
-##Installation:
+## Installation:
 
-###Install the requirements
+### Install the requirements
 
 ```
     pip install -r requirements.txt
 ```
-###Config Program
+### Config Program
 Talk to [BotFather](https://telegram.me/BotFather) and put the token you get there in config.ini file (without quotes)
 ```
     [DEFAULT]
     token=123456789:AReaaaaaaaaaallyLooooooooooongTOKEN
 ```
-##Usage:
-###Starting
+## Usage:
+### Starting
 Replace with `python` if you're using python 2.7:
 ```
     python3 main.py
 ```
-###Using
+### Using
 On Telegram, to list the repos from several users, use:
 ```
     /listing <user1> <user2> ... <userN>
